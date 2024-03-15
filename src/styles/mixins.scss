@@ -1,0 +1,31 @@
+// media query
+// 0 -600px mobile
+// 600px a 900px tablet
+// 900px - 1200px desktop
+
+// $breakpoint argument choices
+// - phone
+// -tablet
+// -tab-land
+// -desktop
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media screen and (max-width: 37.5em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == tab-port {
+        @media screen and (max-width: 56.25em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == tab-land {
+        @media screen and (max-width: 75em) {
+            @content;
+        }
+    }
+}
